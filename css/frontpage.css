@@ -1,0 +1,684 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+header{
+    overflow: hidden;
+}
+/* Navbar Style */
+.first-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007BFF; /* Navbar Background Color */
+    position: relative;
+    z-index: 10;
+}
+.first-navbar a{
+    text-decoration: none;
+}
+.logo {
+    font-size: 24px;
+    color: white;
+}
+
+.logo span {
+    font-weight: bold;
+    color: #FFD700; /* Gold Color for span */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+ul li {
+    margin: 0 15px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: #FFD700; /* Gold Color on Hover */
+}
+
+/* Button Styles */
+.button-1 {
+    display: flex;
+}
+
+.btn-1 {
+    background-color: #FFD700; /* Button Background Color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #007BFF; /* Button Text Color */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-1:hover {
+    transform: translateY(-3px); /* Button lift effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .first-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 10px 0;
+    }
+
+    ul li {
+        margin: 5px 0;
+    }
+
+    .button-1 {
+        flex-direction: column;
+    }
+
+    .btn-1 {
+        margin: 5px 0;
+    }
+}
+
+/*--------------Navbar End----------------------*/
+/*----------------Section Start---------------------------*/
+/* Top Page Section */
+.top-page {
+    padding: 40px;
+    text-align: center; /* टेक्स्ट को केंद्रित करें */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Upper Content */
+.upper-content {
+    margin-bottom: 20px;
+}
+.upper-content a{
+    text-decoration: none;
+}
+.heading h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.heading span {
+    color: #007BFF; /* एक अलग रंग */
+}
+
+.upper-content a h1 {
+    font-size: 24px;
+    color: #007BFF; /* फोन नंबर के लिए रंग */
+    text-decoration: none; /* अंडरलाइन हटा दें */
+    transition: color 0.3s; /* होवर पर रंग बदलने का इफेक्ट */
+}
+
+.upper-content a h1:hover {
+    color: #0056b3; /* होवर पर गहरा रंग */
+}
+
+/* Center Content */
+.center-content {
+    margin: 20px 0;
+}
+
+.center-content h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.center-content p {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Image Section */
+.up-img {
+    display: flex; /* फ्लेक्स डिज़ाइन */
+    justify-content: center; /* सेंटरिंग */
+    flex-wrap: wrap; /* रेस्पॉन्सिव के लिए */
+    gap: 15px; /* इमेज के बीच में गैप */
+}
+
+.up-img img {
+    width: 100px; /* इमेज की शुरुआती चौड़ाई */
+    height: 100px; /* इमेज की शुरुआती ऊँचाई */
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s; /* एनिमेशन */
+}
+
+.up-img img:hover {
+    transform: scale(1.1); /* होवर पर इमेज का आकार बढ़ाएं */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* होवर पर छाया बढ़ाएं */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 28px;
+    }
+
+    .upper-content a h1 {
+        font-size: 20px;
+    }
+
+    .center-content h1 {
+        font-size: 24px;
+    }
+
+    .up-img img {
+        width: 80px; /* छोटे स्क्रीन के लिए इमेज का साइज */
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 24px;
+    }
+
+    .upper-content a h1 {
+        font-size: 18px;
+    }
+
+    .center-content h1 {
+        font-size: 20px;
+    }
+
+    .up-img img {
+        width: 60px; /* और छोटे स्क्रीन के लिए इमेज का साइज */
+        height: 60px;
+    }
+}
+/* बेसिक स्टाइलिंग */
+.flexbox {
+    display: flex;
+    flex-wrap: wrap; /* रेस्पॉन्सिव के लिए */
+    gap: 20px; /* फ्लेक्स बॉक्स के बीच गैप */
+    padding: 40px;
+    justify-content: space-around;
+}
+
+/* Flexbox 1 (Form Section) */
+.flex-1 {
+    flex: 1 1 100%;
+    max-width: 350px; /* फॉर्म का साइज छोटा */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Form Heading और Image */
+.flex1-head h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.flex1-head img {
+    width: 100%;
+    height: auto;
+    max-width: 250px; /* इमेज छोटी हो */
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.flex1-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex1-form input, .flex1-form textarea, .flex1-form select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.flex1-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.flex1-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Flexbox 2 */
+.flex-2, .flex-3 {
+    flex: 1 1 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-2:hover, .flex-3:hover, .flex-1:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Flex 2 Headings */
+.flex2-head h1, .flex2-paragraph p, .flex2-2-2 h3, .flex2-2-2 p {
+    margin-bottom: 15px;
+}
+
+/* Flexbox 3 */
+.flex-3-heading h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Flexbox Icons */
+.flex-3-icon i, .flex-3-2 i, .flex-2-2 i {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+/* Flexbox Paragraphs */
+.flex-3-heading p, .service-paragraph p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .flexbox {
+        flex-direction: column;
+    }
+
+    .flex-1, .flex-2, .flex-3 {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .flex-1, .flex-2, .flex-3 {
+        max-width: 45%;
+    }
+}
+
+
+/* बेसिक स्टाइलिंग */
+.center-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Flexbox कंटेनर */
+.image-content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* रेस्पॉन्सिव के लिए */
+}
+
+/* इमेज कंटेनर */
+.center-image img {
+    max-width: 300px; /* इमेज की साइज कंट्रोल करें */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover इफेक्ट इमेज पर */
+.center-image img:hover {
+    transform: scale(1.05); /* इमेज हल्की बड़ी हो जाए होवर पर */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* टेक्स्ट कंटेनर */
+.paragraph-center h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.paragraph-center p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* बटन स्टाइलिंग */
+.paragraph-center a button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* बटन Hover इफेक्ट */
+.paragraph-center a button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .image-content-center {
+        flex-direction: column; /* मोबाइल पर कॉलम लेआउट */
+        text-align: center;
+    }
+
+    .center-image img {
+        max-width: 100%; /* मोबाइल पर इमेज पूरी चौड़ाई लेगी */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-content-center {
+        gap: 20px; /* टैबलेट पर gap कम करें */
+    }
+
+    .center-image img {
+        max-width: 250px; /* टैबलेट पर इमेज साइज कम रखें */
+    }
+}
+
+/* बेसिक स्टाइलिंग */
+.review {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.review h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Flexbox Container */
+.review-flexbox {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* रेस्पॉन्सिव के लिए */
+}
+
+/* Individual Flexbox Items */
+.review-flexbox1, .review-flexbox2, .review-flexbox3 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Animation for Flexbox Items */
+.review-flexbox1:hover, .review-flexbox2:hover, .review-flexbox3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.review-flexbox1 img, .review-flexbox2 img, .review-flexbox3 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Headings inside flexbox */
+.review-flexbox1 h4, .review-flexbox2 h4, .review-flexbox3 h4 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs inside flexbox */
+.review-flexbox1 p, .review-flexbox2 p, .review-flexbox3 p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Links Styling */
+.review-flexbox1 a, .review-flexbox2 a, .review-flexbox3 a {
+    font-size: 16px;
+    color: #007BFF;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.review-flexbox1 a:hover, .review-flexbox2 a:hover, .review-flexbox3 a:hover {
+    color: #0056b3;
+}
+
+/* रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .review-flexbox {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review-flexbox1, .review-flexbox2, .review-flexbox3 {
+        max-width: 90%; /* मोबाइल पर कार्ड चौड़ाई */
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .review-flexbox {
+        justify-content: space-around;
+    }
+
+    .review-flexbox1, .review-flexbox2, .review-flexbox3 {
+        max-width: 45%;
+    }
+}
+
+/* फ़ुटर बेसिक स्टाइलिंग */
+.footer-1 {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.footer-1 h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-transform: uppercase;
+}
+
+/* इमेज स्टाइलिंग */
+.f1-img img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.f1-img img:hover {
+    transform: scale(1.05); /* इमेज को हल्का ज़ूम इन करें होवर पर */
+}
+
+/* पैराग्राफ स्टाइलिंग */
+.footer-1 p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ccc;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* मोबाइल व्यू के लिए रेस्पॉन्सिव डिज़ाइन */
+@media (max-width: 768px) {
+    .footer-1 {
+        padding: 20px;
+    }
+    
+    .footer-1 h1 {
+        font-size: 24px;
+    }
+
+    .footer-1 p {
+        font-size: 14px;
+    }
+    
+    .f1-img img {
+        max-width: 100%;
+    }
+}
+
+ /* फूटर के लिए बेसिक स्टाइलिंग */
+.footer-2 {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-2 h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* इनलाइन नेविगेशन */
+.nav-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-items li {
+    display: inline;
+}
+
+.nav-items a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 3D इफ़ेक्ट */
+.nav-items a::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.nav-items a:hover::before {
+    top: 0;
+    left: 0;
+}
+
+/* बटन स्टाइलिंग */
+.f1-button {
+    margin-top: 20px;
+}
+
+.f1-button button {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+/* बटन 3D इफेक्ट */
+.f1-button button:hover {
+    transform: translateY(-5px);
+}
+
+/* कॉपीराइट और लास्ट फिटिंग */
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+.footer-2 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-2 a:hover {
+    color: #ff6b6b;
+}
+
+
